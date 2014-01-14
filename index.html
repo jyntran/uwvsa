@@ -1,0 +1,204 @@
+﻿<!DOCTYPE html>
+<html class="no-js" lang="en">
+<head>
+
+	<meta charset="utf-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+	<title>UW VSA</title>
+
+	<!-- STYLESHEETS -->
+	<link rel="stylesheet" href="assets/css/style.css" />
+	<link rel="stylesheet" href="assets/css/entypo.css" />
+	<link rel="stylesheet" href="assets/css/foundation.css" />
+
+	<link rel="stylesheet" href="assets/css/atom.css" />
+
+    <script src="assets/js/modernizr.js"></script>
+
+	<script src="assets/js/jfeed.js" type="text/javascript"></script>
+
+<script>
+var jfeed = get_feed_json("http://www.wallflux.com/info/2212757131");
+        // Feed JSON 
+
+var feed = jQuery.parseJSON(jfeed);
+        // Feed Array
+</script>
+
+<script>
+$().ready(function() { 
+   display_feed(); 
+   display_atom_feed();
+})
+
+var nfeed=0, anfeed=0, i, ai;
+
+var rfeed = jQuery.parseJSON(get_feed_json("http://www.wallflux.com/info/2212757131"));
+var items = rfeed.rss.channel.item; //array contains rss feed items  
+
+
+
+function display_feed() {
+		
+		i=nfeed;
+		nfeed++; if (nfeed == items.length) nfeed=0;
+				
+		$("#main").fadeOut(1000, function() {
+			$("#main").html("<div><b><a href='"+items[i].link+"' target='_black'><h3>"+items[i].title+"<h3></a></b></div>");
+			var fDate = new Date(items[i].pubDate);
+			$("#main").append("<h4><a href='"+rfeed.rss.channel.link+"' target='_black'>"+rfeed.rss.channel.title+"</a>&nbsp;&nbsp;&nbsp;&nbsp;"+fDate+"</h4>");
+			$("#main").append("<div>"+items[i].description+"</div>");
+			$("#main").fadeIn("fast");
+		});		
+		
+		var t=setTimeout("display_feed()",10000);
+		
+};</script>	
+	
+	<!-- FAVICON
+	<link rel="icon" type="image/x-icon" href="http://example.com/favicon.ico" />
+	<link rel="icon" type="image/png" href="http://example.com/favicon.png" />
+	<link rel="icon" type="image/gif" href="http://example.com/favicon.gif" />	
+	-->
+
+</head>
+
+<body>
+	<header>
+	 <a name="top"></a>
+
+	 <nav class="top-bar" data-topbar>
+	  <ul class="title-area">
+          <li class="name">
+           <h1><a href="#">UW VSA</a></h1>
+          </li>
+          <li class="toggle-topbar menu-icon"><a href=""><span>Menu</span></a></li>
+         </ul>
+
+         <section class="top-bar-section">
+
+         <!-- Right Nav Section -->
+       <ul class="right show-for-large-up">
+	   <li><a href="#about" class="smoothScroll"><span id="nav1" class="cms-editable">About</span></a></li>
+	   <li><a href="#sponsors" class="smoothScroll"><span id="nav2" class="cms-editable">Sponsors</span></a></li>
+	   <li><a href="#resources" class="smoothScroll"><span id="nav3" class="cms-editable">Resources</span></a></li>
+	   <li><a href="#follow" class="smoothScroll"><span id="nav4" class="cms-editable">Follow</span></a></li>
+	   <li><a href="#contact" class="smoothScroll"><span id="nav5" class="cms-editable">Contact</span></a></li>
+         </ul>
+
+         <ul class="right hide-for-large-up">
+	   <li><a href="#about" class="smoothScroll"><span id="nav1" class="cms-editable">About</span></a></li>
+	   <li><a href="#sponsors" class="smoothScroll"><span id="nav2" class="cms-editable">Sponsors</span></a></li>
+	   <li><a href="#resources" class="smoothScroll"><span id="nav3" class="cms-editable">Resources</span></a></li>
+	   <li><a href="#follow" class="smoothScroll"><span id="nav4" class="cms-editable">Follow</span></a></li>
+	   <li><a href="#contact" class="smoothScroll"><span id="nav5" class="cms-editable">Contact</span></a></li>	  </ul>
+	  </section>
+	 </nav>
+	</header>
+
+	<div class="container">
+
+	 <section id="top">
+	  <img id="banner" class="banner cms-editable" src="assets/img/1280x650.png"></img>
+	 </section>
+
+	 <article id="box1" class="box">
+	  <a name="about"></a>
+	  <h2 id="heading1" class="heading cms-editable">About</h2>
+	  <p id="aboutInfo" class="boxText cms-editable">
+	   Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer et metus sed risus imperdiet lacinia. Proin commodo ipsum quis eros iaculis rutrum. Quisque sit amet ante diam. Donec non tempor leo, a scelerisque lacus. Suspendisse porttitor lorem varius scelerisque porta. Sed hendrerit ultricies fringilla. Vivamus a mauris sit amet mi aliquam dapibus id vitae nisi. Maecenas euismod, sapien sit amet molestie lacinia, leo lacus egestas elit, ac sodales lectus leo vitae nisi. Praesent vel justo eget mi suscipit fringilla. Donec convallis consectetur mauris, vel congue lorem aliquet ut. Proin ac justo malesuada, varius dui in, congue mauris. Pellentesque ultrices ligula diam, lobortis venenatis mi cursus feugiat. Nunc sollicitudin non lectus in luctus. Nam scelerisque dapibus tincidunt.
+	   <br><br>
+	   Cras elementum vestibulum justo, dapibus venenatis nibh ullamcorper sit amet. Sed rutrum hendrerit vehicula. Suspendisse tempor, lectus ut sollicitudin venenatis, risus erat facilisis purus, nec ultricies mauris augue vitae mi. Integer rhoncus sapien odio, in condimentum mi suscipit et. Etiam sed eleifend lectus. Phasellus pulvinar scelerisque dolor quis pellentesque. Donec tempor tristique risus, quis ultricies dui aliquet eget. Sed fermentum non elit eget tristique. Nullam nec felis lobortis, consequat turpis non, venenatis odio. Aliquam accumsan neque sed faucibus ornare. Nunc vitae nulla vitae lorem tincidunt ullamcorper euismod vitae ligula. Ut at sollicitudin est. Nullam porta est ut lacus vestibulum, ut luctus quam dictum. Quisque ultrices congue interdum. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Pellentesque lacinia vel diam ac pretium.
+	  </p>
+	 </article>
+
+	 <article id="box2" class="box">
+	  <a name="sponsors"></a>
+	  <h2 id="heading2" class="heading cms-editable">Sponsors</h2>
+	  <p id="sponsorsInfo" class="boxText cms-editable">
+	   Cras elementum vestibulum justo, dapibus venenatis nibh ullamcorper sit amet. Sed rutrum hendrerit vehicula. Suspendisse tempor, lectus ut sollicitudin venenatis, risus erat facilisis purus, nec ultricies mauris augue vitae mi. Integer rhoncus sapien odio, in condimentum mi suscipit et. Etiam sed eleifend lectus. Phasellus pulvinar scelerisque dolor quis pellentesque. Donec tempor tristique risus, quis ultricies dui aliquet eget. Sed fermentum non elit eget tristique. Nullam nec felis lobortis, consequat turpis non, venenatis odio. Aliquam accumsan neque sed faucibus ornare. Nunc vitae nulla vitae lorem tincidunt ullamcorper euismod vitae ligula. Ut at sollicitudin est. Nullam porta est ut lacus vestibulum, ut luctus quam dictum. Quisque ultrices congue interdum. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Pellentesque lacinia vel diam ac pretium.
+	  </p>
+	 </article>	 
+
+	 <article id="box3" class="box">
+	  <a name="resources"></a>
+	  <h2 id="heading3" class="heading cms-editable">Resources</h2>
+	  <p id="resourcesInfo" class="boxText cms-editable">
+	   <h3 class="heading-vietphrase">Viet Phrase of the Day</h3>
+	   <span class="vietphrase-viet">Chào</span><br/>
+	   <span class="vietphrase-eng">(Hello)<span>
+	   <hr>
+	   <h3 class="heading-links-cult">Cultural Links</h3>
+	   <nav><ul>
+	   <li>Link 1</li>
+	   <li>Link 2</li>
+	   <li>Link 3</li>
+	   </ul></nav>
+   	   <h3 class="heading-links-org">Vietnamese Organizations Links</h3>
+	   <nav><ul>
+	   <li>Link 1</li>
+	   <li>Link 2</li>
+	   <li>Link 3</li>
+	   </ul></nav>
+	  </p>
+	 </article>	 
+
+	 
+	 <article id="box4" class="box">
+	  <a name="follow"></a>
+	  <h2 id="heading4" class="heading cms-editable">Follow</h2>
+<!--
+	  <a href="https://www.facebook.com/groups/UWVSA" class="button">Facebook</a>
+	  <a href="https://twitter.com/UWVSA" class="button">Twitter</a>
+	  <a href="https://twitter.com/UWVSA" class="button">Instagram</a>
+
+	  <script type='text/javascript' charset='utf-8' src='http://scripts.hashemian.com/jss/feed.js?print=yes&numlinks=10&summarylen=500&seedate=yes&popwin=no&url=http:%2F%2Fwww.wallflux.com%2Fatom%2F2212757131'></script>
+-->
+
+		<div id="buttonFacebook" class="followButton">
+		<a href="https://www.facebook.com/groups/UWVSA"><span class="followButtonText">&#xE802;</span></a>
+		</div>
+		<div id="buttonTwitter" class="followButton">
+		<a href="https://twitter.com/UWVSA"><span class="followButtonText">&#xE804;</span></a>
+		</div>
+		<div id="buttonInstagram" class="followButton">
+		<a href="http://instagram.com/uwvsa"><span class="followButtonText">&#xE805;</span></a>
+		</div>
+
+	 </article>
+
+	 <article id="box5" class="box">
+	  <a name="contact"></a>
+	  <h2 id="heading5" class="heading cms-editable">Contact</h2>
+	  
+		<div id="buttonEmail" class="followButton">
+		<a href="mailto:uwvsa.info@gmail.com"><span class="followButtonTextEntypo">&#9993;</span></a>
+		</div>
+<!--
+	  <a href="mailto:uwvsa.info@gmail.com" class="button">Email</a>
+-->
+
+<!--
+		<div id="buttonEmail" class="followButton">
+		<a href="mailto:uwvsa.info@gmail.com"><span class="followButtonText">&#9993;</span></a>
+		</div>
+-->
+	 </article>
+
+	</div>
+
+	<footer>
+	 <section id="bottom">
+	 </section>
+	</footer>
+
+	<script src="assets/js/jquery.js"></script>
+	<script src="assets/js/foundation.min.js"></script>
+	<script>
+      	 $(document).foundation();
+	</script>
+	<script src="assets/js/smoothscroll.js"></script>
+
+</body>
+
+</html>

@@ -1,0 +1,125 @@
+/*
+	single + responsive =
+	CLEAN
+*/
+
+/* RESET */
+* { margin: 0; padding: 0; }
+ul, ol { list-bullet-style: none; }
+
+/* ICONS */
+@font-face {
+font-family: entypo;
+src: url(entypo.eot);
+}
+@font-face {
+font-family: entypo;
+src: url(entypo.woff);
+}
+/* SOCIAL */
+@font-face {
+font-family: fontello;
+src: url(fontello.eot);
+}
+@font-face {
+font-family: fontello;
+src: url(fontello.woff);
+}
+
+::selection,
+::moz-selection {
+background: #ffffcc;
+}
+
+body {
+font: 100% Helvetica, sans serif;
+}
+
+.container {
+width: 100%;
+margin: auto;
+}
+
+.top-navi {
+display: block;
+width: 100%;
+background: #cccccc;
+}
+
+.navi {
+display: block;
+width: 200px;
+float: left;
+}
+
+.navi li {
+display: inline-block;
+padding: 10px;
+}
+
+.navi li a {
+color: #666666;
+}
+
+#banner {
+width: 100%;
+height: auto;
+}
+
+.box {
+padding: 5em;
+text-align: center;
+}
+
+.box .boxText {
+padding: 0px 1.4em;
+}
+
+.box .heading {
+font-size: 3.0em;
+padding: 10px;
+margin: 15px auto;
+text-align: center;
+border-bottom: 2px solid #cc0000;
+}
+
+.vietphrase-viet {
+font-size: 2.6em;
+font-family: georgia, times, serif;
+}
+
+.vietphrase-eng {
+font-size: 0.8em;
+font-style: italic;
+}
+
+.followButton {
+display: inline-block;
+margin: auto;
+padding: 10px;
+}
+
+.followButtonText {
+font-family: fontello;
+text-align: center;
+font-size: 100px;
+}
+
+.followButtonTextEntypo {
+font-family: fontello;
+text-align: center;
+font-size: 100px;
+}
+
+#bottom {
+background: #eeeeee;
+min-height: 400px;
+}
+
+/* MEDIA QUERIES */
+
+@media only screen and (max-width: 40em) {
+
+	.box {padding: 0.6em;}
+	
+}
