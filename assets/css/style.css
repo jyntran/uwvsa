@@ -5,7 +5,7 @@
 
 /* RESET */
 * { margin: 0; padding: 0; }
-ul, ol { list-bullet-style: none; }
+ul, ol { list-style-type: none; }
 
 /* ICONS */
 @font-face {
@@ -61,9 +61,28 @@ padding: 10px;
 color: #666666;
 }
 
+#top {
+display: block;
+}
+
+#top-container {
+position: relative;
+}
+
 #banner {
 width: 100%;
 height: auto;
+z-index: 50;
+}
+
+#top-text {
+position: absolute;
+top: 10%;
+left: 50%;
+z-index: 75;
+font-size: 4em;
+font-style: italic;
+text-shadow: 1px 1px 0px #ffffff;
 }
 
 .box {
@@ -88,9 +107,26 @@ font-size: 2.6em;
 font-family: georgia, times, serif;
 }
 
+.vietphrase-viet:before {
+content: "\""
+}
+
+.vietphrase-viet:after {
+content: "\""
+}
+
 .vietphrase-eng {
+line-height: 1em;
 font-size: 0.8em;
 font-style: italic;
+}
+
+.vietphrase-eng:before {
+content: "("
+}
+
+.vietphrase-eng:after {
+content: ")"
 }
 
 .followButton {
@@ -113,13 +149,14 @@ font-size: 100px;
 
 #bottom {
 background: #eeeeee;
-min-height: 400px;
+min-height: 200px;
 }
 
 /* MEDIA QUERIES */
 
 @media only screen and (max-width: 40em) {
 
+   #top-text {display: none;}
 	.box {padding: 0.6em;}
 	
 }
