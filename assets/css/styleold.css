@@ -7,6 +7,14 @@
 * { margin: 0; padding: 0; }
 ul, ol { list-style-type: none; }
 
+body a {
+color: #cc0000;
+}
+
+body a:hover {
+color: #aa0000;
+}
+
 /* ICONS */
 @font-face {
 font-family: entypo;
@@ -26,14 +34,6 @@ font-family: fontello;
 src: url(fontello.woff);
 }
 
-/* BUTTON COLOUR */
-.button.red {
-background: #cc0000;
-}
-.button.red :hover{
-background: #aa0000;
-}
-
 ::selection,
 ::moz-selection {
 background: #ffffcc;
@@ -41,14 +41,6 @@ background: #ffffcc;
 
 body {
 font: 100% Helvetica, sans serif;
-}
-
-body a {
-color: #cc0000;
-}
-
-body a:hover {
-color: #aa0000;
 }
 
 .container {
@@ -94,26 +86,21 @@ z-index: 50;
 #top-text {
 position: absolute;
 top: 10%;
-left: 20%;
+left: 50%;
 z-index: 75;
-font-size: 5em;
-font-weight: bold;
-text-transform: uppercase;
-text-shadow: 2px 2px 10px #000000;
-color: #ffffff;
+font-size: 4em;
+font-style: italic;
+text-shadow: 1px 1px 0px #ffffff;
 }
 
 #top-subtext {
 position: absolute;
-bottom: 10%;
-left: 20%;
+top: 60%;
+left: 50%;
 z-index: 75;
 font-size: 2em;
-font-weight: bold;
 font-style: italic;
-text-transform: uppercase;
-text-shadow: 2px 2px 5px #000000;
-color: #ffffff;
+text-shadow: 1px 1px 0px #ffffff;
 }
 
 .box {
@@ -186,10 +173,7 @@ font-size: 1.6em;
 #bottom {
 background: #eeeeee;
 padding: 0.6em;
-border-top: 1px solid #bbbbbb;
-position: absolute;
-bottom: 0;
-width: 100%;
+border-top: 1px solid #999999;
 }
 
 
@@ -203,15 +187,15 @@ width: 100%;
 
 @media only screen and (min-width: 40.063em) and (max-width: 64.063em) {
 
-	#top-text {font-size: 3.6em;left: 15%;top: 9%;}
-	#top-subtext {font-size: 1.4em; left: 15%;bottom: 9%;}
+	#top-text {font-size: 2.5em;}
+	#top-subtext {font-size: 1.5em;}
 
 }
 
 @media only screen and (max-width: 40em) {
 
-	#top-text {font-size: 2.6em;left:10%;top:6%;}
-	#top-subtext {display: none;}
+	#top-text {font-size: 2em;left:25%;top:5%;}
+	#top-subtext {font-size: 1em;left:25%;top:60%;}
 	.box {padding: 0.6em;}
 	
 }

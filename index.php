@@ -1,4 +1,4 @@
-﻿<!DOCTYPE html>
+<!DOCTYPE html>
 <html class="no-js" lang="en">
 <head>
 
@@ -21,6 +21,8 @@
 	<link rel="icon" type="image/gif" href="http://example.com/favicon.gif" />	
 	-->
 
+	<script language="JavaScript" src="assets/js/gen_validatorv31.js" type="text/javascript"></script>
+	
 </head>
 
 <body>
@@ -60,8 +62,9 @@
 
 	 <section id="top">
 	  <div id="top-container">
-	  <img id="banner" class="banner cms-editable" src="assets/img/1280x650.png"></img>
-	  <span id="top-text">The Official Waterloo Chapter of the Vietnamese Students' Association</span>
+	  <img id="banner" class="banner cms-editable" src="assets/img/banner.png"></img>
+	  <span id="top-text">Reconnect.<br/>Discover.<br/>Engage.</span>
+	  <span id="top-subtext">The Official Waterloo Chapter<br/>of the Vietnamese Students' Association</span>
 	  </div>
 	 </section>
 
@@ -88,19 +91,16 @@
 	  <a name="resources"></a>
 	  <h2 id="heading3" class="heading cms-editable">Resources</h2>
 	  <p id="resourcesInfo" class="boxText cms-editable">
-	   <h3 class="heading-vietphrase">Today's Viet Phrase</h3>
-	   <span class="vietphrase-viet">Chào</span><br/>
-	   <span class="vietphrase-eng">Hello</span>
-	   <hr>
+	   <?php include('vietphrase.html'); ?>
 	   <div class="row">
-	   <div class="small-6 columns">
-	   <h3 class="heading-links-cult">Cultural Information</h3>
-	   Coming soon
-	   </div>
-   	   <div class="small-6 columns">
-   	   <h3 class="heading-links-org">Vietnamese Organizations</h3>
-	   <a href="http://uvsaontario.org/">UVSA Ontario</a>
-	   </div>
+		   <div class="small-6 columns">
+		   <h3 class="heading-links-cult">Cultural Information</h3>
+		   Coming soon
+		   </div>
+		   <div class="small-6 columns">
+		   <h3 class="heading-links-org">Vietnamese Organizations</h3>
+		   <a href="http://uvsaontario.org/">UVSA Ontario</a>
+		   </div>
 	   </div>
 	  </p>
 	 </article>	 
@@ -127,28 +127,60 @@
 	 <article id="box5" class="box">
 	  <a name="contact"></a>
 	  <h2 id="heading5" class="heading cms-editable">Contact</h2>
-	  
+
+	  <div class="row">	  
+	    <div class="large-6 columns">
 		<div id="buttonEmail" class="followButton">
 		<a href="mailto:uwvsa@clubs.feds.ca"><span class="followButtonTextEntypo">&#9993;</span>
 		<br/><br/>
-		uwvsa@clubs.feds.ca</a>
+		<span class="link-email">uwvsa@clubs.feds.ca</span></a>
 		</div>
+		</div>
+		
+		<div class="large-6 columns">
+		<h3>Join our Mailing List</h3>
+		<br/>
+		<form action="mailing-form-handler.php" method="POST" name="mailingform">
+		<div class="row">
+		  <div class="large-12 columns">
+		    <label>Name:</label>
+		    <input type="text" name="name"><br>
+			<label>Email:</label>
+			<input type="text" name="email"><br>
+			<input type="submit" value="Submit" class="button red">
+			<input type="reset" value="Reset" class="button red">
+		</form>
+		</div>
+	  </div>
 
+</body>
+</html>
+
+		
 		</article>
 
 	</div>
 
 	<footer>
 	 <section id="bottom">
+	 &copy; <?php echo date("Y"); ?> University of Waterloo Vietnamese Student Association	 
 	 </section>
 	</footer>
-
+	
 	<script src="assets/js/jquery.js"></script>
 	<script src="assets/js/foundation.min.js"></script>
 	<script>
       	 $(document).foundation();
 	</script>
 	<script src="assets/js/smoothscroll.js"></script>
+
+	<script language="JavaScript">
+	var frmvalidator  = new Validator("mailingform");
+	frmvalidator.addValidation("name","req","Please provide your name");
+	frmvalidator.addValidation("email","req","Please provide your email");
+	frmvalidator.addValidation("email","email",
+	  "Please enter a valid email address");
+	</script>
 
 </body>
 
