@@ -14,7 +14,7 @@
     <script src="assets/js/modernizr.js"></script>
 	
 	<!-- FAVICON -->
-	<link rel="icon" type="image/png" href="assets/img/uwvsa-logo-512.png" />
+	<link rel="icon" type="image/png" href="assets/img/uwvsa-logo-48.png" />
 
 	<!--
 	<link rel="icon" type="image/x-icon" href="http://example.com/favicon.ico" />
@@ -32,7 +32,7 @@
 	 <nav class="top-bar" data-topbar>
 	  <ul class="title-area">
           <li class="name">
-           <h1><a href="#">UW VSA</a></h1>
+		   <h1><a href="#">UW VSA</a></h1>
           </li>
           <li class="toggle-topbar menu-icon"><a href=""><span>Menu</span></a></li>
          </ul>
@@ -70,27 +70,32 @@
 
 	 <article id="box1" class="box">
 	  <a name="about"></a>
-	  <h2 id="heading1" class="heading cms-editable">About</h2>
-	  <p id="aboutInfo" class="boxText cms-editable">
+	  <h2 id="heading1" class="heading">About</h2>
+	  <div class="row">
+	  <div class="large-4 columns">
+	  <img class="logo" src="assets/img/uwvsa-logo-512.png">
+	  </div>
+	  <div class="large-8 columns">
+	  <p id="aboutInfo" class="boxText"><br/>
 	  To the University of Waterloo, we are your connection to Vietnamese culture, Vietnamese traditions, and the Vietnamese community. UWVSA strengthens the campus community through organizing social events, cultural events, and collaborations. 
 	  <br/><br/>
 	  The UWVSA operates on the premise of being inclusive. The club shall not be discriminatory in terms of, but not limited to race, ethnicity, religion, gender, citizenship, sexual orientation, physical ability, mental ability, marital, social, or financial status.
-
 	  </p>
+	  </div>
+	  </div>
 	 </article>
 
 	 <article id="box2" class="box">
 	  <a name="sponsors"></a>
 	  <h2 id="heading2" class="heading cms-editable">Sponsors</h2>
 	  <p id="sponsorsInfo" class="boxText cms-editable">
-		We wish to extend a warm thank-you to our sponsors.
+		This area is reserved for our generous sponsors.
 	  </p>
 	 </article>	 
 
 	 <article id="box3" class="box">
 	  <a name="resources"></a>
 	  <h2 id="heading3" class="heading cms-editable">Resources</h2>
-	  <p id="resourcesInfo" class="boxText cms-editable">
 	   <?php include('vietphrase.html'); ?>
 	   <div class="row">
 		   <div class="small-6 columns">
@@ -102,7 +107,6 @@
 		   <a href="http://uvsaontario.org/">UVSA Ontario</a>
 		   </div>
 	   </div>
-	  </p>
 	 </article>	 
 
 	 
@@ -111,13 +115,13 @@
 	  <h2 id="heading4" class="heading cms-editable">Follow</h2>
 
 		<div id="buttonFacebook" class="followButton">
-		<a href="https://www.facebook.com/groups/UWVSA"><span class="followButtonText">&#xE802;</span></a>
+		<a href="https://www.facebook.com/groups/UWVSA" title="Facebook"><span class="followButtonText">&#xE802;</span></a>
 		</div>
 		<div id="buttonTwitter" class="followButton">
-		<a href="https://twitter.com/UWVSA"><span class="followButtonText">&#xE804;</span></a>
+		<a href="https://twitter.com/UWVSA" title="Twitter"><span class="followButtonText">&#xE804;</span></a>
 		</div>
 		<div id="buttonInstagram" class="followButton">
-		<a href="http://instagram.com/uwvsa"><span class="followButtonText">&#xE805;</span></a>
+		<a href="http://instagram.com/uwvsa" title="Instagram"><span class="followButtonText">&#xE805;</span></a>
 		</div>
 
 		<script type="text/javascript" class=	"rebelmouse-embed-script" src="https://www.rebelmouse.com/static/js-build/embed/embed.js?site=uwvsa&height=650&flexible=0&scrollbar_theme=dark"></script>
@@ -131,7 +135,7 @@
 	  <div class="row">	  
 	    <div class="large-6 columns">
 		<div id="buttonEmail" class="followButton">
-		<a href="mailto:uwvsa@clubs.feds.ca"><span class="followButtonTextEntypo">&#9993;</span>
+		<a href="mailto:uwvsa@clubs.feds.ca" title="Email"><span class="followButtonTextEntypo">&#9993;</span>
 		<br/><br/>
 		<span class="link-email">uwvsa@clubs.feds.ca</span></a>
 		</div>

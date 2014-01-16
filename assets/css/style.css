@@ -30,8 +30,8 @@ src: url(fontello.woff);
 .button.red {
 background: #cc0000;
 }
-.button.red :hover{
-background: #aa0000;
+.button.red:hover{
+background: #ffcc00;
 }
 
 ::selection,
@@ -48,7 +48,7 @@ color: #cc0000;
 }
 
 body a:hover {
-color: #aa0000;
+color: #ffcc00;
 }
 
 .container {
@@ -75,6 +75,10 @@ padding: 10px;
 
 .navi li a {
 color: #666666;
+}
+
+.name {
+display: inline-block;
 }
 
 #top {
@@ -203,14 +207,14 @@ width: 100%;
 
 @media only screen and (min-width: 40.063em) and (max-width: 64.063em) {
 
-	#top-text {font-size: 3.6em;left: 15%;top: 9%;}
-	#top-subtext {font-size: 1.4em; left: 15%;bottom: 9%;}
+	#top-text {font-size: 3.6em; left: 15%; top: 9%;}
+	#top-subtext {font-size: 1.4em; left: 15%; bottom: 9%;}
 
 }
 
 @media only screen and (max-width: 40em) {
 
-	#top-text {font-size: 2.6em;left:10%;top:6%;}
+	#top-text {font-size: 2.6em; left:10%; top:6%;}
 	#top-subtext {display: none;}
 	.box {padding: 0.6em;}
 	
