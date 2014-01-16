@@ -2,6 +2,9 @@
 <html class="no-js" lang="en">
 <head>
 
+<!-- Redirect automatically  - just for Clubs Days -->
+<META HTTP-EQUIV=Refresh CONTENT="3; URL=index.php#contact"> 
+
 	<meta charset="utf-8" />
 	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
 	<title>UW VSA</title>
@@ -31,8 +34,10 @@
 	  <h2 id="heading1" class="heading">Thank you!</h2>
 	  <p class="boxText">
 	  Your email will be added to the UW VSA mailing list.
+	  <br/><br/>
+	  You will be redirected automatically to the previous page.
 	  </p>
-	  <a href="index.php#contact" class="button red">Return</a>
+	  <a href="index.php#contact" class="button red">Go Back Now</a>
 	 </article>
 
 	</div>

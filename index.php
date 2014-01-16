@@ -10,18 +10,24 @@
 	<link rel="stylesheet" href="assets/css/foundation.css" />
 	<link rel="stylesheet" href="assets/css/style.css" />
 
+	<script src="assets/js/jquery.js"></script>
+	<script src="assets/js/smoothscroll.js"></script>
 
     <script src="assets/js/modernizr.js"></script>
 	
 	<!-- FAVICON -->
 	<link rel="icon" type="image/png" href="assets/img/uwvsa-logo-48.png" />
 
-	<!--
-	<link rel="icon" type="image/x-icon" href="http://example.com/favicon.ico" />
-	<link rel="icon" type="image/gif" href="http://example.com/favicon.gif" />	
-	-->
-
+  <!-- VALIDATOR FOR FORM -->
 	<script language="JavaScript" src="assets/js/gen_validatorv31.js" type="text/javascript"></script>
+	
+  <!-- MODERNIZR -->
+	<script type="text/javascript">
+	  Modernizr.load({
+	  test: Modernizr.text-shadow,
+	  nope: 'assets/css/no-text-shadow.css'
+	});
+	</script>
 	
 </head>
 
@@ -42,18 +48,19 @@
          <!-- Right Nav Section -->
        <ul class="right show-for-large-up">
 	   <li><a href="#about" class="smoothScroll"><span id="nav1" class="cms-editable">About</span></a></li>
-	   <li><a href="#sponsors" class="smoothScroll"><span id="nav2" class="cms-editable">Sponsors</span></a></li>
-	   <li><a href="#resources" class="smoothScroll"><span id="nav3" class="cms-editable">Resources</span></a></li>
 	   <li><a href="#follow" class="smoothScroll"><span id="nav4" class="cms-editable">Follow</span></a></li>
+	   <li><a href="#resources" class="smoothScroll"><span id="nav3" class="cms-editable">Resources</span></a></li>
+	   <li><a href="#sponsors" class="smoothScroll"><span id="nav2" class="cms-editable">Sponsors</span></a></li>
 	   <li><a href="#contact" class="smoothScroll"><span id="nav5" class="cms-editable">Contact</span></a></li>
          </ul>
 
          <ul class="right hide-for-large-up">
 	   <li><a href="#about" class="smoothScroll"><span id="nav1" class="cms-editable">About</span></a></li>
-	   <li><a href="#sponsors" class="smoothScroll"><span id="nav2" class="cms-editable">Sponsors</span></a></li>
-	   <li><a href="#resources" class="smoothScroll"><span id="nav3" class="cms-editable">Resources</span></a></li>
 	   <li><a href="#follow" class="smoothScroll"><span id="nav4" class="cms-editable">Follow</span></a></li>
-	   <li><a href="#contact" class="smoothScroll"><span id="nav5" class="cms-editable">Contact</span></a></li>	  </ul>
+	   <li><a href="#resources" class="smoothScroll"><span id="nav3" class="cms-editable">Resources</span></a></li>
+	   <li><a href="#sponsors" class="smoothScroll"><span id="nav2" class="cms-editable">Sponsors</span></a></li>
+	   <li><a href="#contact" class="smoothScroll"><span id="nav5" class="cms-editable">Contact</span></a></li>
+         </ul>
 	  </section>
 	 </nav>
 	</header>
@@ -62,8 +69,8 @@
 
 	 <section id="top">
 	  <div id="top-container">
-	  <img id="banner" class="banner cms-editable" src="assets/img/banner.png"></img>
-	  <span id="top-text">Reconnect.<br/>Discover.<br/>Engage.</span>
+	  <img id="banner" class="banner cms-editable" src="assets/img/banner.jpg"></img>
+	  <span id="top-text">Reconnect.<br/>Engage.<br/>Discover.</span>
 	  <span id="top-subtext">The Official Waterloo Chapter<br/>of the Vietnamese Students' Association</span>
 	  </div>
 	 </section>
@@ -85,31 +92,6 @@
 	  </div>
 	 </article>
 
-	 <article id="box2" class="box">
-	  <a name="sponsors"></a>
-	  <h2 id="heading2" class="heading cms-editable">Sponsors</h2>
-	  <p id="sponsorsInfo" class="boxText cms-editable">
-		This area is reserved for our generous sponsors.
-	  </p>
-	 </article>	 
-
-	 <article id="box3" class="box">
-	  <a name="resources"></a>
-	  <h2 id="heading3" class="heading cms-editable">Resources</h2>
-	   <?php include('vietphrase.html'); ?>
-	   <div class="row">
-		   <div class="small-6 columns">
-		   <h3 class="heading-links-cult">Cultural Information</h3>
-		   Coming soon
-		   </div>
-		   <div class="small-6 columns">
-		   <h3 class="heading-links-org">Vietnamese Organizations</h3>
-		   <a href="http://uvsaontario.org/">UVSA Ontario</a>
-		   </div>
-	   </div>
-	 </article>	 
-
-	 
 	 <article id="box4" class="box">
 	  <a name="follow"></a>
 	  <h2 id="heading4" class="heading cms-editable">Follow</h2>
@@ -127,7 +109,32 @@
 		<script type="text/javascript" class=	"rebelmouse-embed-script" src="https://www.rebelmouse.com/static/js-build/embed/embed.js?site=uwvsa&height=650&flexible=0&scrollbar_theme=dark"></script>
 
 	 </article>
+	 
+	 
+	 <article id="box3" class="box">
+	  <a name="resources"></a>
+	  <h2 id="heading3" class="heading cms-editable">Resources</h2>
+	   <?php include('vietphrase.html'); ?>
+	   <div class="row">
+		   <div class="small-6 columns">
+		   <h3 class="heading-links-cult">Cultural Information</h3>
+		   Coming soon
+		   </div>
+		   <div class="small-6 columns">
+		   <h3 class="heading-links-org">Vietnamese Organizations</h3>
+		   <a href="http://uvsaontario.org/">UVSA Ontario</a>
+		   </div>
+	   </div>
+	 </article>	 
 
+	 <article id="box2" class="box">
+	  <a name="sponsors"></a>
+	  <h2 id="heading2" class="heading cms-editable">Sponsors</h2>
+	  <p id="sponsorsInfo" class="boxText cms-editable">
+		This area is reserved for our generous sponsors.
+	  </p>
+	 </article>	 
+	 
 	 <article id="box5" class="box">
 	  <a name="contact"></a>
 	  <h2 id="heading5" class="heading cms-editable">Contact</h2>
@@ -146,16 +153,47 @@
 		<br/>
 		<form action="mailing-form-handler.php" method="POST" name="mailingform">
 		<div class="row">
-		  <div class="large-12 columns">
-		    <label>Name:</label>
-		    <input type="text" name="name"><br>
+		  <div class="large-6 columns">
+		    <label>First Name:</label>
+		    <input type="text" name="firstname" value="<?php echo $firstname; ?>"><br>
+		  </div>
+ 		  <div class="large-6 columns">
+			<label>Last Name:</label>
+			<input type="text" name="lastname" value="<?php echo $lastname; ?>"><br>
+		  </div>
+		 </div>
+		 <div class="row">
+		 <div class="large-5 columns">
+			<label>Student ID:</label>
+			<input type="text" name="studentid" value="<?php echo $studentid; ?>"><br>
+		 </div>
+		 <div class="large-7 columns">		 
 			<label>Email:</label>
-			<input type="text" name="email"><br>
+			<input type="text" name="email" value="<?php echo $email; ?>"><br>
+		  </div>
+		</div>
+		<div class="row">
+		  <div class="large-12 columns">
+			<label>Suggest an Event (optional):</label>
+			<input type="text" name="suggest" value="<?php echo $suggest; ?>"><br>
+   		    <input type="hidden" name="submitted" value="1" />
 			<input type="submit" value="Submit" class="button red">
 			<input type="reset" value="Reset" class="button red">
+		  </div>
+		 </div>
 		</form>
 		</div>
 	  </div>
+
+<!-- Google Doc Embed
+	  <iframe src="https://docs.google.com/spreadsheet/embeddedform?formkey=dHZPR1luMXBBT3JCeXFyS1VPYjJtS0E6MA" width="760" height="686" frameborder="0" marginheight="0" marginwidth="0">Loading...</iframe>
+	  
+-->
+
+
+
+</div>
+</article>
 
 </body>
 </html>
@@ -171,19 +209,19 @@
 	 </section>
 	</footer>
 	
-	<script src="assets/js/jquery.js"></script>
 	<script src="assets/js/foundation.min.js"></script>
 	<script>
       	 $(document).foundation();
 	</script>
-	<script src="assets/js/smoothscroll.js"></script>
 
 	<script language="JavaScript">
 	var frmvalidator  = new Validator("mailingform");
-	frmvalidator.addValidation("name","req","Please provide your name");
-	frmvalidator.addValidation("email","req","Please provide your email");
+	frmvalidator.addValidation("firstname","req","Please provide your first name.");
+	frmvalidator.addValidation("lastname","req","Please provide your last name.");
+	frmvalidator.addValidation("studentid","req","Please provide your student ID.");
+	frmvalidator.addValidation("email","req","Please provide your email.");
 	frmvalidator.addValidation("email","email",
-	  "Please enter a valid email address");
+	  "Please enter a valid email address.");
 	</script>
 
 </body>

@@ -77,10 +77,6 @@ padding: 10px;
 color: #666666;
 }
 
-.name {
-display: inline-block;
-}
-
 #top {
 display: block;
 }
@@ -214,9 +210,9 @@ width: 100%;
 
 @media only screen and (max-width: 40em) {
 
-	#top-text {font-size: 2.6em; left:10%; top:6%;}
+	#top-text {font-size: 2.6em; left: 10%; top: 6%;}
 	#top-subtext {display: none;}
 	.box {padding: 0.6em;}
-	
+	#bottom {margin-top: 0.6em; font-size: 0.8em;}
 }
 
