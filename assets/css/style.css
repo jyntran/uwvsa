@@ -205,6 +205,7 @@ width: 100%;
 
 	#top-text {font-size: 3.6em; left: 15%; top: 9%;}
 	#top-subtext {font-size: 1.4em; left: 15%; bottom: 9%;}
+	.logo {padding: 1.4em 0;}
 
 }
 
@@ -214,5 +215,7 @@ width: 100%;
 	#top-subtext {display: none;}
 	.box {padding: 0.6em;}
 	#bottom {margin-top: 0.6em; font-size: 0.8em;}
+	.logo {width: 40%; height: auto; padding: 0.4em 0 1em 0;}
+	
 }
 

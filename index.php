@@ -4,72 +4,79 @@
 
 	<meta charset="utf-8" />
 	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+	
 	<title>UW VSA</title>
+	<meta name="description" content="University of Waterloo Vietnamese Student Association" />
+	<meta name="keywords" content="UWVSA,UW VSA,VSA,Vietnamese Student Association,Vietnamese,University of Waterloo, Waterloo">
+	<meta name="robots" content="index, nofollow" />
 
 	<!-- STYLESHEETS -->
 	<link rel="stylesheet" href="assets/css/foundation.css" />
 	<link rel="stylesheet" href="assets/css/style.css" />
 
-	<script src="assets/js/jquery.js"></script>
-	<script src="assets/js/smoothscroll.js"></script>
+	<!-- JAVASCRIPT/JQUERY -->
+	<script src="assets/js/jquery.min.js" type="text/javascript"></script>
+	<script src="assets/js/smoothscroll.min.js" type="text/javascript"></script>
 
-    <script src="assets/js/modernizr.js"></script>
+	<!-- MODERNIZR -->
+    <script src="assets/js/modernizr.js" type="text/javascript"></script>
+    <script src="assets/js/modernizr.custom.js" type="text/javascript"></script>
 	
-	<!-- FAVICON -->
-	<link rel="icon" type="image/png" href="assets/img/uwvsa-logo-48.png" />
-
-  <!-- VALIDATOR FOR FORM -->
-	<script language="JavaScript" src="assets/js/gen_validatorv31.js" type="text/javascript"></script>
-	
-  <!-- MODERNIZR -->
 	<script type="text/javascript">
-	  Modernizr.load({
-	  test: Modernizr.text-shadow,
+	Modernizr.load({
+	  test: Modernizr.textshadow,
 	  nope: 'assets/css/no-text-shadow.css'
 	});
 	</script>
+
+    <!-- VALIDATOR FOR FORM -->
+	<script src="assets/js/gen_validatorv31.min.js" type="text/javascript"></script>
 	
+	<!-- FAVICON -->
+	<link rel="icon" type="image/png" href="assets/img/uwvsa-logo-48.png" />
+		
 </head>
 
 <body>
 	<header>
-	 <a name="top"></a>
-
+	<a name="top"></a>
+	<div class="fixed">
 	 <nav class="top-bar" data-topbar>
 	  <ul class="title-area">
           <li class="name">
 		   <h1><a href="#">UW VSA</a></h1>
           </li>
           <li class="toggle-topbar menu-icon"><a href=""><span>Menu</span></a></li>
-         </ul>
+      </ul>
 
-         <section class="top-bar-section">
+      <section class="top-bar-section">
+		
+        <!-- Right Nav Section -->
+		<ul class="right show-for-large-up">
+			<li><a href="#about" class="smoothScroll"><span id="nav1">About</span></a></li>
+			<li><a href="#follow" class="smoothScroll"><span id="nav2">Follow</span></a></li>
+			<li><a href="#resources" class="smoothScroll"><span id="nav3">Resources</span></a></li>
+			<li><a href="#sponsors" class="smoothScroll"><span id="nav4">Sponsors</span></a></li>
+			<li><a href="#contact" class="smoothScroll"><span id="nav5">Contact</span></a></li>
+        </ul>
 
-         <!-- Right Nav Section -->
-       <ul class="right show-for-large-up">
-	   <li><a href="#about" class="smoothScroll"><span id="nav1" class="cms-editable">About</span></a></li>
-	   <li><a href="#follow" class="smoothScroll"><span id="nav4" class="cms-editable">Follow</span></a></li>
-	   <li><a href="#resources" class="smoothScroll"><span id="nav3" class="cms-editable">Resources</span></a></li>
-	   <li><a href="#sponsors" class="smoothScroll"><span id="nav2" class="cms-editable">Sponsors</span></a></li>
-	   <li><a href="#contact" class="smoothScroll"><span id="nav5" class="cms-editable">Contact</span></a></li>
-         </ul>
-
-         <ul class="right hide-for-large-up">
-	   <li><a href="#about" class="smoothScroll"><span id="nav1" class="cms-editable">About</span></a></li>
-	   <li><a href="#follow" class="smoothScroll"><span id="nav4" class="cms-editable">Follow</span></a></li>
-	   <li><a href="#resources" class="smoothScroll"><span id="nav3" class="cms-editable">Resources</span></a></li>
-	   <li><a href="#sponsors" class="smoothScroll"><span id="nav2" class="cms-editable">Sponsors</span></a></li>
-	   <li><a href="#contact" class="smoothScroll"><span id="nav5" class="cms-editable">Contact</span></a></li>
-         </ul>
+        <ul class="right hide-for-large-up">
+			<li><a href="#about" class="smoothScroll"><span id="nav1">About</span></a></li>
+			<li><a href="#follow" class="smoothScroll"><span id="nav2">Follow</span></a></li>
+			<li><a href="#resources" class="smoothScroll"><span id="nav3">Resources</span></a></li>
+			<li><a href="#sponsors" class="smoothScroll"><span id="nav4">Sponsors</span></a></li>
+			<li><a href="#contact" class="smoothScroll"><span id="nav5">Contact</span></a></li>
+        </ul>
 	  </section>
 	 </nav>
+	</div>
 	</header>
 
 	<div class="container">
 
 	 <section id="top">
 	  <div id="top-container">
-	  <img id="banner" class="banner cms-editable" src="assets/img/banner.jpg"></img>
+	  <img id="banner" class="banner" alt="" src="assets/img/banner.jpg"></img>
 	  <span id="top-text">Reconnect.<br/>Engage.<br/>Discover.</span>
 	  <span id="top-subtext">The Official Waterloo Chapter<br/>of the Vietnamese Students' Association</span>
 	  </div>
@@ -79,22 +86,22 @@
 	  <a name="about"></a>
 	  <h2 id="heading1" class="heading">About</h2>
 	  <div class="row">
-	  <div class="large-4 columns">
-	  <img class="logo" src="assets/img/uwvsa-logo-512.png">
+	  <div class="large-4 medium-4 columns">
+	  <img class="logo" alt="UW VSA logo" src="assets/img/uwvsa-logo-512.png">
 	  </div>
-	  <div class="large-8 columns">
-	  <p id="aboutInfo" class="boxText"><br/>
-	  To the University of Waterloo, we are your connection to Vietnamese culture, Vietnamese traditions, and the Vietnamese community. UWVSA strengthens the campus community through organizing social events, cultural events, and collaborations. 
+	  <div class="large-8 medium-8 columns">
+	  <p id="aboutInfo" class="boxText">
+	  To the University of Waterloo, we are your connection to Vietnamese culture, Vietnamese traditions, and the Vietnamese community. UW VSA strengthens the campus community through organizing social events, cultural events, and collaborations. 
 	  <br/><br/>
-	  The UWVSA operates on the premise of being inclusive. The club shall not be discriminatory in terms of, but not limited to race, ethnicity, religion, gender, citizenship, sexual orientation, physical ability, mental ability, marital, social, or financial status.
+	  UW VSA operates on the premise of being inclusive. The club shall not be discriminatory in terms of, but not limited to race, ethnicity, religion, gender, citizenship, sexual orientation, physical ability, mental ability, marital, social, or financial status.
 	  </p>
 	  </div>
 	  </div>
 	 </article>
 
-	 <article id="box4" class="box">
+	 <article id="box2" class="box">
 	  <a name="follow"></a>
-	  <h2 id="heading4" class="heading cms-editable">Follow</h2>
+	  <h2 id="heading2" class="heading">Follow</h2>
 
 		<div id="buttonFacebook" class="followButton">
 		<a href="https://www.facebook.com/groups/UWVSA" title="Facebook"><span class="followButtonText">&#xE802;</span></a>
@@ -113,7 +120,7 @@
 	 
 	 <article id="box3" class="box">
 	  <a name="resources"></a>
-	  <h2 id="heading3" class="heading cms-editable">Resources</h2>
+	  <h2 id="heading3" class="heading">Resources</h2>
 	   <?php include('vietphrase.html'); ?>
 	   <div class="row">
 		   <div class="small-6 columns">
@@ -127,17 +134,17 @@
 	   </div>
 	 </article>	 
 
-	 <article id="box2" class="box">
+	 <article id="box4" class="box">
 	  <a name="sponsors"></a>
-	  <h2 id="heading2" class="heading cms-editable">Sponsors</h2>
-	  <p id="sponsorsInfo" class="boxText cms-editable">
+	  <h2 id="heading4" class="heading">Sponsors</h2>
+	  <p id="sponsorsInfo" class="boxText">
 		This area is reserved for our generous sponsors.
 	  </p>
 	 </article>	 
 	 
 	 <article id="box5" class="box">
 	  <a name="contact"></a>
-	  <h2 id="heading5" class="heading cms-editable">Contact</h2>
+	  <h2 id="heading5" class="heading">Contact</h2>
 
 	  <div class="row">	  
 	    <div class="large-6 columns">
@@ -184,13 +191,6 @@
 		</form>
 		</div>
 	  </div>
-
-<!-- Google Doc Embed
-	  <iframe src="https://docs.google.com/spreadsheet/embeddedform?formkey=dHZPR1luMXBBT3JCeXFyS1VPYjJtS0E6MA" width="760" height="686" frameborder="0" marginheight="0" marginwidth="0">Loading...</iframe>
-	  
--->
-
-
 
 </div>
 </article>

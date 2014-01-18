@@ -11,9 +11,7 @@
    $submitted = $_POST['submitted'];
 
    if ($submitted == 1) {
-   echo "submitted form";
-	 $timestamp = date("m-d-y H:i:s",time());
-echo $timestamp;
+	  $timestamp = date("m-d-y H:i:s");
       $firstname = $_POST['firstname'];
       $lastname = $_POST['lastname'];
 	  $studentid = $_POST['studentid'];
@@ -21,11 +19,16 @@ echo $timestamp;
 	  $suggest = $_POST['suggest'];
 
       // Do some error checking here if you want
-      if (!$email) {
-         echo "<h3><font color='red'>*Email Address is required</font></h3>";
-      } else {
+      if (!$firstname) {
+         echo "Error: First Name is required";
+      } else if (!$lastname) {
+         echo "Error: Last Name is required";
+      } else if (!$studentid) {
+         echo "Error: Student ID is required";
+      } else if (!$email) {
+         echo "Error: Email Address is required";
+	  } else {
          // No errors, continue processing registration
-echo "no errors so far";
          $row = array (
 			"Timestamp" => $timestamp
             , "First Name" => $firstname
@@ -34,18 +37,15 @@ echo "no errors so far";
             , "E-mail" => $email
 			, "Suggest an Event!" => $suggest
          );
-echo "to doc heading";
 
          if ($ss->addRow($row)) {
             // Display success page here
-
-            echo "<h1>Thanks for registering!</h1>";
 			header('Location: thankyou.php');
 
             // Send a confirmation email here if you want
          } else {
             // Failed to write to the spreadsheet
-            echo "<h1>Sorry there was an error processing your request.</h1>";
+            echo "<h1>Sorry. there was an error processing your request.</h1>";
          }
       }
    }
